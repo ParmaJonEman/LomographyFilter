@@ -1,15 +1,16 @@
-### Histogram Matcher
-### Author: Jon Eman
-### Date: 10/23/2022
+# Lomo
+### Setup
 
-### Build
-##### To build, install OpenCV on your computer, change the OpenCV path in the CMAKE file, and use the standard CMAKE commands for building.
+- [Install OpenCV](https://opencv.org/releases/), and replace the path in the CMAKE file on the find_package line with your new path
+- If you're on Windows, [download dirent.h](https://github.com/tronkko/dirent) and put in your linker's include folder
+- Build the project with the standard CMAKE build commands
 
-### Usage
+### Run
 
-##### Run the program with the following command structure:
-    histo <image file> -m=<method> [<matching file>]
-
-##### Where -m is the histogram equalizaiton or matching method. (1 for equalization, 2 for matching to an image, and 3 for matching to a normalized histogram txt file)
-##### and <matching file> is an image you wish to histogram match, or a normalized histogram in a txt file.
-##### Images must be 8 bit greyscale. Histogram must be 256 lines long, with all values adding up to 1.
+- Run the application via the command line with the following usage patten:
+    - lomo.exe <image>
+- Example:
+    - lomo.exe cat.jpg
+- Key commands:
+    - s or S to save the image and exit (Image is aved as Output.jpg)
+    - q or Q to quit the application without saving the image

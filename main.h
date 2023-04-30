@@ -26,12 +26,9 @@
 using namespace cv;
 using namespace std;
 
-static int parseParameters(int argc, char** argv, string* imageFile, int* option, string* matchFile);
-
-static int* createTheHistogram(Mat image);
-static float* normalizeTheHistogram(int histogram[256], Mat image);
-static int* equalizeTheHistogram(float normalizedHistogram[256]);
-static Mat applyTheHistogram(int histogram[256], Mat image);
-static int* specifyTheHistogram(int equalizedHistogram[256], int goalEqualizedHistogram[256]);
-static float* getNormalizedHistogramFromFile(string fileName);
-static int isImageColor(Mat image);
+static Mat createHaloFilter(int radius);
+static void onTrackbarHalo(int percent, void* );
+static void onTrackbarLomo(int level, void* );
+static int parseParameters(int argc, char** argv, string* imageFile);
+static Mat createLUT(float param);
+static int waitForKeyCommand();
