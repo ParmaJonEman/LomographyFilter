@@ -7,7 +7,7 @@
 ### Run
 
 - Run the application via the command line with the following usage patten:
-    - lomo.exe <image>
+    - lomo.exe \<image\>
 - Example:
     - lomo.exe cat.jpg
 - Key commands:
